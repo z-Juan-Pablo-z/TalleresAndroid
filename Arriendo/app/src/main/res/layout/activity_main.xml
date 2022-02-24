@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Arriendo"
+        android:textColor="#DD1212"
+        android:textSize="30dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CalcularArriendo">
+
+        <RadioButton
+            android:id="@+id/idrbhouse"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:checked="true"
+            android:onClick="CalcularArriendo"
+            android:text="   casa"
+
+            android:textSize="25dp" />
+
+        <RadioButton
+            android:id="@+id/idrbapartment"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="CalcularArriendo"
+            android:text="   apartamento"
+            android:textSize="25dp" />
+
+        <RadioButton
+            android:id="@+id/idrbfarm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="CalcularArriendo"
+            android:text="   finca"
+            android:textSize="25dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvarriendo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="400000"
+            android:textSize="25dp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etcanthabitaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Digite Cantidad de habitaciones"
+            android:inputType="number"
+            android:onClick="CalcularHabitaciones"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvvhabitacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp">
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:text="Opcional"
+            android:textSize="25dp">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbparking"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:onClick="ValidarOpcional"
+            android:text="Parqueadero"
+            android:textSize="20dp"></CheckBox>
+        <TextView
+            android:id="@+id/tvparking"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="25dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="98dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSolucion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btncalcular"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#066C15"
+            android:onClick="CalcularTotal"
+            android:text="Calcular"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnclean"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#E60C0C"
+            android:onClick="Limpiar"
+            android:text="Limpiar"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
