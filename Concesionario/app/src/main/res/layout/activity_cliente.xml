@@ -191,7 +191,9 @@
             android:layout_weight="1"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="Consultar" />
+            android:text="Consultar"
+            android:onClick="consultar"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -242,6 +244,7 @@
             android:layout_weight="1"
             android:textSize="20dp"
             android:gravity="center"
-            android:text="Regresar" />
+            android:text="Regresar"
+            android:onClick="regresar"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

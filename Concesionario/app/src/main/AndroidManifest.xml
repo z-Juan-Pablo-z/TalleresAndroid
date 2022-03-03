@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Concesionario">
         <activity
+            android:name=".Vehiculo"
+            android:exported="false" />
+        <activity
             android:name=".Cliente"
             android:exported="false" />
         <activity
