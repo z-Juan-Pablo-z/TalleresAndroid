@@ -1,9 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vehiculo">
+    tools:context=".Cliente"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="VEHICULOS"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:textColor="#05423C"
+        android:textSize="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/etplaca"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:hint="Ingrese la placa"
+            android:gravity="center"
+            android:inputType=""
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etmarca"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:hint="Ingrese la marca"
+            android:gravity="center"
+            android:inputType="text"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etmodelo"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:hint="Ingrese el modelo"
+            android:gravity="center"
+            android:inputType="text"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/etvalor"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:hint="Ingrese el valor"
+            android:gravity="center"
+            android:inputType="text"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+        <Button
+            android:id="@+id/btnsave"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:textAllCaps="false"
+            android:backgroundTint="#1763D5"
+            />
+        <Button
+            android:id="@+id/btnconsultar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="consultar"
+            android:textAllCaps="false"
+            android:backgroundTint="#1763D5"
+            android:layout_marginLeft="10dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/btnanular"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Anular"
+            android:textAllCaps="false"
+            android:backgroundTint="#C80F0F"
+            />
+
+        <Button
+            android:id="@+id/btncancelar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#1763D5"
+            android:text="cancelar"
+
+            android:textAllCaps="false" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnregresar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="regresar"
+            android:textAllCaps="false"
+            android:backgroundTint="#1763D5"
+            android:layout_marginLeft="10dp"
+
+            />
+    </LinearLayout>
+</LinearLayout>

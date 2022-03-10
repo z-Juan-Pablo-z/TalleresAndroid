@@ -16,14 +16,18 @@ public class Conexion_Consesionario extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("Create table TblCliente(Identificacion text primary key,nombre text not null,usuario text not null," +
                 "clave text not null, valor text,activo text not null default 'si')");
+        sqLiteDatabase.execSQL("Create table TblVehiculo(placa text primary key,marca text not null, " +
+                "modelo text not null,valor text not null,activo text not null default 'si')");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("Drop table cliente");{
+        sqLiteDatabase.execSQL("Drop table TblCliente");{
             onCreate(sqLiteDatabase);
         }
-
+        sqLiteDatabase.execSQL("Drop table TblVehiculo");{
+            onCreate(sqLiteDatabase);
+        }
     }
 }

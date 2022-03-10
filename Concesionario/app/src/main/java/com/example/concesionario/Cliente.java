@@ -24,7 +24,7 @@ public class Cliente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
-        getActionBar().hide();
+        getSupportActionBar().hide();
         etidentificacion = findViewById(R.id.etIdentificacion);
         etnombre = findViewById(R.id.etNombre);
         etcorreo = findViewById(R.id.etCorreo);

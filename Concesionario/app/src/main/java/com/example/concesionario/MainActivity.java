@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intRegistrarse=new Intent(this,Cliente.class);
         startActivity(intRegistrarse);
     }
+
     public void cancelar(View view){
         limpiarCampos();
     }
