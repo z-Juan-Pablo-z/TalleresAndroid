@@ -19,6 +19,7 @@ public class Cliente extends AppCompatActivity {
     TextView tvactivo;
     long resp;
     int sw;
+    String identificacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class Cliente extends AppCompatActivity {
         sw=0;
     }
      public void Guardar(View view) {
-        String identificacion,nombre,correo,clave1,clave2;
+        String nombre,correo,clave1,clave2;
         identificacion=etidentificacion.getText().toString();
          nombre=etnombre.getText().toString();
          correo=etcorreo.getText().toString();
@@ -93,12 +94,29 @@ public class Cliente extends AppCompatActivity {
 
 
      }
+     public void anular(View view){
+        consultarCliente();
+        if (sw==1){
+            Conexion_Consesionario admin = new Conexion_Consesionario(this,"concecionario.bd",null,1);
+            SQLiteDatabase db =admin.getReadableDatabase();
+            ContentValues dato = new ContentValues();
+            dato.put("Identificacion",identificacion);
+            dato.put("activo","no");
+            resp=db.update("TblCLiente",dato,"Identificacion='"+identificacion+"'",null);
+            if (resp>0){
+                Toast.makeText(this, "Registro anulado", Toast.LENGTH_SHORT).show();
+                limpiarCampos();
+            }
+        }else{
+            Toast.makeText(this, "Error al anular el registro", Toast.LENGTH_SHORT).show();
+        }
+     }
+
      public void consultar(View view){
         consultarCliente();
      }
 
      public void consultarCliente(){
-        String identificacion;
         identificacion = etidentificacion.getText().toString();
          if(identificacion.isEmpty()){
              Toast.makeText(this, "Identificacion requerida", Toast.LENGTH_SHORT).show();
